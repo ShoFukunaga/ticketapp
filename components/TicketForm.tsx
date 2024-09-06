@@ -38,8 +38,12 @@ const TicketForm = ({ ticket }: Props) => {
     try {
       setIsSubmitting(true);
       setError("");
+      if (ticket) {
+        await axios.patch("/api/tickets/" + ticket.id, values);
+      } else {
+        await axios.post("/api/tickets", values);
+      }
 
-      await axios.post("/api/tickets", values);
       setIsSubmitting(false);
       router.push("/tickets");
       router.refresh();
@@ -136,7 +140,7 @@ const TicketForm = ({ ticket }: Props) => {
             />
           </div>
           <Button type="submit" disabled={isSubmitting}>
-            Submit
+            {ticket ? "Update Ticket" : "Create Ticket"}
           </Button>
         </form>
       </Form>
