@@ -54,7 +54,7 @@ const Tickets = async ({ searchParams }: { searchParams: SearchParams }) => {
         New Ticket
       </Link>
       <StatusFilter />
-      <DataTable tickets={tickets} />
+      <DataTable tickets={tickets} searchParams={searchParams} />
       <Pagination
         itemCount={ticketCount}
         pageSize={pageSize}

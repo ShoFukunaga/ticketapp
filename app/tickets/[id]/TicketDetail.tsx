@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import TicketStatusBadge from "@/components/TicketStatusBadge";
-import TicketPrirority from "@/components/TicketPrirority";
+import TicketPrirority from "@/components/TicketPriority";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
