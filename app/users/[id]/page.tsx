@@ -2,8 +2,7 @@ import React from "react";
 import prisma from "@/prisma/db";
 import UserForm from "@/components/UserForm";
 import { getServerSession } from "next-auth";
-import options from "../../api/auth/[...nextauth]/options";
-
+import options from "@/app/api/auth/[...nextauth]/options";
 interface Props {
   params: { id: string };
 }
